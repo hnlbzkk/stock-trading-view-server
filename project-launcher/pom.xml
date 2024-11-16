@@ -2,47 +2,44 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <!-- todo: modify parent module name-->
     <parent>
-        <groupId>com.xyz</groupId>
-        <artifactId>JavaBase</artifactId>
+        <groupId>com.personal</groupId>
+        <artifactId>stock-trading-view-server</artifactId>
         <version>0.0.1</version>
     </parent>
 
-    <!-- todo: modify module-->
     <artifactId>project-launcher</artifactId>
     <version>0.0.1</version>
     <description>launcher</description>
     <packaging>jar</packaging>
 
-    <!-- todo: modify all dependency name-->
     <dependencies>
         <dependency>
-            <groupId>com.xyz</groupId>
+            <groupId>com.personal</groupId>
             <artifactId>project-base</artifactId>
             <version>0.0.1</version>
         </dependency>
 
         <dependency>
-            <groupId>com.xyz</groupId>
+            <groupId>com.personal</groupId>
             <artifactId>project-web</artifactId>
             <version>0.0.1</version>
         </dependency>
 
         <dependency>
-            <groupId>com.xyz</groupId>
+            <groupId>com.personal</groupId>
             <artifactId>project-db</artifactId>
             <version>0.0.1</version>
         </dependency>
 
         <dependency>
-            <groupId>com.xyz</groupId>
+            <groupId>com.personal</groupId>
             <artifactId>project-security</artifactId>
             <version>0.0.1</version>
         </dependency>
 
         <dependency>
-            <groupId>com.xyz</groupId>
+            <groupId>com.personal</groupId>
             <artifactId>project-ws</artifactId>
             <version>0.0.1</version>
         </dependency>

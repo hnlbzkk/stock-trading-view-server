@@ -2,14 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <!-- todo: modify parent module name-->
     <parent>
-        <groupId>com.xyz</groupId>
-        <artifactId>JavaBase</artifactId>
+        <groupId>com.personal</groupId>
+        <artifactId>stock-trading-view-server</artifactId>
         <version>0.0.1</version>
     </parent>
 
-    <!-- todo: modify module name-->
     <artifactId>project-base</artifactId>
     <version>0.0.1</version>
     <packaging>jar</packaging>
@@ -65,9 +63,8 @@
             <version>1.18.28</version>
         </dependency>
 
-        <!-- todo: modify db module name-->
         <dependency>
-            <groupId>com.xyz</groupId>
+            <groupId>com.personal</groupId>
             <artifactId>project-db</artifactId>
             <version>0.0.1</version>
         </dependency>

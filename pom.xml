@@ -9,12 +9,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <!-- todo: modify parent module name-->
-    <groupId>com.xyz</groupId>
-    <artifactId>JavaBase</artifactId>
+    <groupId>com.personal</groupId>
+    <artifactId>stock-trading-view-server</artifactId>
     <version>0.0.1</version>
-    <name>JavaBase</name>
-    <description>JavaBase</description>
+    <name>stock-trading-view-server</name>
+    <description>stock-trading-view-server</description>
     <packaging>pom</packaging>
 
     <properties>
@@ -26,7 +25,6 @@
     </dependencyManagement>
 
 
-    <!-- todo: modify module name-->
     <modules>
         <module>project-base</module>
         <module>project-web</module>
