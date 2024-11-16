@@ -17,4 +17,5 @@ public interface AccountService {
 
     boolean register(RegisterParam param);
 
+    LoginVO test();
 }

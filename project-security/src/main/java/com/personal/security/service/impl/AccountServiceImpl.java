@@ -1,6 +1,7 @@
 package com.personal.security.service.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.personal.base.exception.ServiceException;
 import com.personal.base.message.ResultCode;
 import com.personal.base.utils.LogUtils;
@@ -96,5 +97,20 @@ public class AccountServiceImpl implements AccountService {
         }
 
         return true;
+    }
+
+    @Override
+    public LoginVO test() {
+        LoginVO result = null;
+        try {
+            // test mysql
+            List<UserEntity> userEntities = userMapper.selectList(new QueryWrapper<>());
+
+            Object cacheObject = redisCache.getCacheObject("LOGIN:admin@163.com");
+            return new LoginVO("成功!   mysql有数据:" + userEntities.get(0).toString() + "      redis有数据:" + cacheObject);
+        } catch (Exception e) {
+            result = new LoginVO("mysql 或者 redis 有问题");
+        }
+        return result;
     }
 }

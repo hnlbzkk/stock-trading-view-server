@@ -39,4 +39,11 @@ public class AccountController {
                 ResponseResult.success(result) :
                 ResponseResult.fail(ResultCode.USER_LOGIN_ERROR);
     }
+
+    @GetMapping("/test")
+    @LogApi
+    public ResponseResult<LoginVO> test() {
+        LoginVO result = accountService.test();
+        return ResponseResult.success(result);
+    }
 }
