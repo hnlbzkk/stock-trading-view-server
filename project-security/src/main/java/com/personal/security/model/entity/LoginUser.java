@@ -48,7 +48,6 @@ public class LoginUser implements UserDetails {
         return user.getPassword();
     }
 
-    // todo: modify username
     /**
      * 以用户注册的email作为登录账户
      * @return

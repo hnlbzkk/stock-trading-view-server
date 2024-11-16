@@ -31,17 +31,15 @@ public class JwtUtils {
         JwtUtils.redisUtil = redisUtil;
     }
 
-    // todo: ttl
     /**
      * 有效期 24小时
      */
-    private static final Long JWT_TTL = 24 * 60 * 60 * 1000L;
+    private static final Long JWT_TTL = 7 * 24 * 60 * 60 * 1000L;
 
-    // todo: Jwt Key
     /**
      * 设置秘钥
      */
-    private static final String JWT_KEY = "Java_Base^JWT#2023@ZKKzs";
+    private static final String JWT_KEY = "Stock_Trading_View^JWT#2023@ZKKzs";
 
 
     /**
@@ -137,7 +135,7 @@ public class JwtUtils {
                 // 主题  可以是JSON数据
                 .setSubject(subject)
                 // 签发者
-                .setIssuer("JavaBase")
+                .setIssuer("StockTradingView")
                 // 签发时间
                 .setIssuedAt(now)
                 //使用HS256对称加密算法签名, 第二个参数为秘钥

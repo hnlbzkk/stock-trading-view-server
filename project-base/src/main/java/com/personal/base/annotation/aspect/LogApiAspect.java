@@ -13,9 +13,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class LogApiAspect {
 
-    /**
-     * todo: modify package name
-     */
     @Pointcut("@annotation(com.personal.base.annotation.LogApi)")
     public void logApi() {}
 

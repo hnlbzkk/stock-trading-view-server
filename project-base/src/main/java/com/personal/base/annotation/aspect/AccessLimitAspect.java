@@ -38,9 +38,7 @@ public class AccessLimitAspect {
     @Autowired
     private RedisUtil redisUtil;
 
-    /**
-     * todo: modify package name
-     */
+
     @Pointcut("execution(public * com.personal.*.*Controller.*(..)) || @annotation(com.personal.base.annotation.AccessLimit)")
     public void accessLimit() {
     }

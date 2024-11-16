@@ -2,6 +2,7 @@ package com.personal.db;
 
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
 import com.baomidou.mybatisplus.generator.config.OutputFile;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.util.Collections;
 
@@ -10,14 +11,14 @@ import java.util.Collections;
  * @since 2023/8/2
  **/
 public class MySQLAutoGenerator {
-    // todo: mysql
-    private static final String url = "jdbc:mysql://localhost:3306/java_base?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai";
+
+    private static final String url = "jdbc:mysql://localhost:3306/stock_trading_view?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai";
 
     // todo: username
-    private static final String userName = "your_username";
+    private static final String userName = "root";
 
     // todo: password
-    private static final String password = "your_password";
+    private static final String password = "zk123456";
 
     // todo: your name(author)
     private static final String author = "ZKKzs";
@@ -26,25 +27,22 @@ public class MySQLAutoGenerator {
     /**
      * project path (absolute)
      */
-    private static final String absolutePath = "E:\\Project\\JavaBase";
+    private static final String absolutePath = "E:\\Project\\StockTradingView\\stock-trading-view-server";
 
-    // todo: db module path
     /**
      * db module path
      */
-    private static final String dbPath = "\\project-db\\src\\main\\java\\com\\xyz\\db\\mysql\\xml";
+    private static final String dbPath = "\\project-db\\src\\main\\java\\com\\personal\\db\\mysql\\xml";
 
-    // todo: web module path
     /**
      * web module path
      */
     private static final String webPath = "\\project-web\\src\\main\\java";
 
-    // todo: web package
     /**
      * web module package
      */
-    private static final String parent = "com.xyz.web";
+    private static final String parent = "com.personal.web";
 
     public static void main(String[] args) {
         FastAutoGenerator.create(url, userName, password)
