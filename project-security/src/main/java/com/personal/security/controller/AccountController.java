@@ -1,6 +1,6 @@
 package com.personal.security.controller;
 
-import com.personal.base.annotation.LogApi;
+import com.personal.base.annotation.AccessLimit;
 import com.personal.base.message.ResponseResult;
 import com.personal.base.message.ResultCode;
 import com.personal.security.model.param.LoginParam;
@@ -23,7 +23,6 @@ public class AccountController {
     private AccountService accountService;
 
     @PostMapping("/register")
-    @LogApi
     public ResponseResult register(@RequestBody @Valid RegisterParam param) {
         boolean isSuccess = accountService.register(param);
         return isSuccess ?
@@ -32,7 +31,6 @@ public class AccountController {
     }
 
     @GetMapping("/login")
-    @LogApi
     public ResponseResult<LoginVO> login(@RequestBody @Valid LoginParam param) {
         LoginVO result = accountService.login(param);
         return result != null ?
@@ -41,7 +39,7 @@ public class AccountController {
     }
 
     @GetMapping("/test")
-    @LogApi
+    @AccessLimit(second = 5, maxRequestCount = 10, forbiddenTime = 60)
     public ResponseResult<LoginVO> test() {
         LoginVO result = accountService.test();
         return ResponseResult.success(result);

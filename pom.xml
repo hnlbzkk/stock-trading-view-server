@@ -24,7 +24,6 @@
         </dependencies>
     </dependencyManagement>
 
-
     <modules>
         <module>project-base</module>
         <module>project-web</module>
@@ -33,15 +32,6 @@
         <module>project-ws</module>
         <module>project-launcher</module>
     </modules>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
     <developers>
         <developer>

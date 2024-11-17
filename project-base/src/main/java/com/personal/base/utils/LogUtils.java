@@ -15,7 +15,7 @@ import java.util.Objects;
  **/
 public class LogUtils {
 
-    private static final HttpServletRequest REQUEST = ((ServletRequestAttributes) Objects.requireNonNull(RequestContextHolder.getRequestAttributes())).getRequest();
+    private static HttpServletRequest REQUEST = ((ServletRequestAttributes) Objects.requireNonNull(RequestContextHolder.getRequestAttributes())).getRequest();
 
     public static String error(ResultCode code) {
         return new LogParam(
